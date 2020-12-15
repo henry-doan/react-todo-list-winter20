@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+Initial Release 2013
+  By Facebook 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tools
+  node 
+  yarn / npm 
 
-## Available Scripts
+  HTML JS CSS, WEBPACK, BABEL 
+  create-react-app
+    Boiler plate
 
-In the project directory, you can run:
+    create-react-app my-app
+    npm init react-app my-app
+    yarn create react-app my-app
 
-### `yarn start`
+  Google Chrome
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  React Dev Tools
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+ReactJS is a library, NPM package
+  "Just JavaScript" 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React provides a declarative API complete with 
+  state control and 
+  lifecycle methods to control the render flow.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+What about other solutions:
+  Angular
+  Ember
+  Vue
+  etc...
+  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Key Principles 
+  Declarative.  
+  Composability
+  1 Way data flow (props)
+  Virtual DOM - in memory cache, computes differences and render on a copy of the DOM 
+    - reconciliation 
+    - selective rendering for components 
+  State - Storage 
+  Props - Properties passed down from parent child 
+  JSX - JavaScript XML, JS and HTML  
+    onClick
+    className
+    {}
+    
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    // React.createelement.ComponentReact.createelement.Component
+    // React.createelement.Component(div counter counter div)
+  Components
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+Logical Component ( Stateful component )
+  do logic 
+  state 
+  lifecycle Methods
+  class 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
+Presentational Component ( stateless component )
+  displaying onto the screen  
+  const
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+HOC 
+  Higher ordered component
+
+State - storage { users: [], firstName: '' }
+  JS Object we can store properties in
+  Component Storage
+  When a value changes in state, render is called
+
+
+Props 
+  Properties passed down parent to child
+  One way 
+  Read only 
+
+          //         App color
+          //        /   \
+          //               Counter
+          //    Counter color
+
+
+
+  /*                 Todo List Structure
+
+                          Index
+                            |
+                          App (todos)(addTodo) (updateComplete)    
+                           /  \                   \
+           (addTodo)TodoForm   List (todos) (updateComplete)      Footer
+                                  |       |     |
+                                Todo(updateComplete)    Todo(updateComplete)    Todo(updateComplete) 
+
+  */
+
+//  Index
+//  |
+// App      
+//     /  \         \
+// Home   List    Footer
+//   |
+//   Logo  info
