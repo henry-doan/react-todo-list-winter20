@@ -108,7 +108,7 @@ Props
                             |
                           App (todos)(addTodo) (updateComplete)    
                            /  \                   \
-           (addTodo)TodoForm   List (todos) (updateComplete)      Footer
+           (addTodo)TodoForm   List (todos) (updateComplete)                Footer
                                   |       |     |
                                 Todo(updateComplete)    Todo(updateComplete)    Todo(updateComplete) 
 
